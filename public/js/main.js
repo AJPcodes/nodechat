@@ -14,6 +14,14 @@
     `)
   })
 
+  zap.on('chat', (data) => {
+      displayChat(data);
+  })
+
+  zap.on('initChats', (data) => {
+    data.forEach(chat => displayChat(chat))
+  })
+
   const form = document.querySelector('form')
   const name = form.querySelector('input[name="name"]')
   const text = form.querySelector('input[name="text"]')
@@ -28,24 +36,18 @@
 
   };
 
-  zap.on('chat', (data) => {
-      console.log(data)
-      displayChat(data);
-  })
 
   form.addEventListener('submit', (e) => {
     e.preventDefault()
-    console.log('hello', name.value, text.value)
     let data = {
       text: text.value,
       name: name.value
     }
-
-    displayChat(data);
     zap.emit('chat', data, (result) => {
-      console.log(result);
     })
 
+    text.value = "";
   })
+
 
 })()
