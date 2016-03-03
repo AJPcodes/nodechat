@@ -15,9 +15,14 @@ app.get('/', (req, res) => {
 })
 
 io.on('connection', (socket) => {
-  console.log('a user connected');
+  console.log('Socket Connected ==== ');
+
+  socket.on('chat', (data) => {
+    socket.broadcast.emit('chat', data);
+  });
+
   socket.on('disconnect', () => {
-    console.log('user disconnected');
+    console.log('user disconnected => <=');
   });
 });
 
@@ -26,6 +31,7 @@ server.listen(PORT, () => console.log(`
  ___  ____  ____  _  _  ____  ____    __  __  ____
 / __)( ___)(  _ \\( \\/ )( ___)(  _ \\  (  )(  )(  _ \\
 \\__ \\ )__)  )   / \\  /  )__)  )   /   )(__)(  )___/
-(___/(____)(_)\\_)  \\/  (____)(_)\_)  (______)(__)
+(___/(____)(_)\\_)  \\/  (____)(_)\\_)  (______)(__)
 
 c(._.)b PORT ${PORT}  d(-__-)O `))
+

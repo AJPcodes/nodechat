@@ -1,8 +1,19 @@
 html
   head
   body
-    h1 Socket!
+    h1 Nodechat
+
+    form
+      .form-group
+        input(type='text' name="name")
+      .form-group
+        input(type='text' name="text")
+      .form-group
+        input(type='submit')
+
+    ul
 
 
-    script(src="/vender/socket.io/lib/client.js")
+
+    script(src="/vender/socket.io-client/socket.io.js")
     script(src="/js/main.js")
