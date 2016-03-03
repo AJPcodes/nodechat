@@ -1,0 +1,26 @@
+{
+  "name": "nodechat",
+  "version": "1.0.0",
+  "description": "NSS student project for practicing socket.io",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "serve": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AJPcodes/nodechat.git"
+  },
+  "author": "Allen Phelps github.com/ajpcodes (http://github.com/AJPcodes)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AJPcodes/nodechat/issues"
+  },
+  "homepage": "https://github.com/AJPcodes/nodechat#readme",
+  "dependencies": {
+    "bower": "^1.7.7",
+    "express": "^4.13.4",
+    "socket.io": "^1.4.5"
+  }
+}

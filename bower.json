@@ -1,0 +1,22 @@
+{
+  "name": "nodechat",
+  "description": "NSS student project for practicing socket.io",
+  "main": "server.js",
+  "authors": [
+    "Allen Phelps github.com/ajpcodes (http://github.com/AJPcodes)"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/AJPcodes/nodechat",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vender",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "socket.io": "^1.4.5"
+  }
+}
